@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: 0;
@@ -87,7 +87,9 @@
 .course {
     font-style: italic;
 }
-
+.project li{
+    margin-left: 20px;
+}
 .skills span{
     font-weight: bold;
 }
@@ -98,10 +100,126 @@
     justify-content: space-between;
 }
 
-.job-title,
-.job-location           
- {
+.job-title {
     font-weight: bold;
+}
+
+.job-title,
+.job-role {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+.job-role{
+    font-style: italic;
+}
+.job-location,
+.job-duration {
+    flex-shrink: 1;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.project span {
+    font-weight: bold;
+}
+
+.publication span{
+    font-weight: bold;
+    
+}
+.publication li,.education li,.award li,.vol_exp li,.experience li,.skills li{
+    margin-left: 20px;
+}
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fix typo in 'box-sizing' */
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px auto; /* Center the container horizontally */
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.left a,
+.right a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+}
+
+
+.mobile {
+    padding-top: 5px;
+}
+
+.bordered {
+    border: 1px solid rgba(19, 174, 235, 0.909);
+    padding: 3px;
+    border-radius: 0px;
+}
+
+.section {
+    padding-top: 8px;
+}
+
+.section h2 {
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black; 
+}
+
+.college-info,
+.degree-info,
+.job,
+.time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.college-name,
+.job-title,
+.project span,
+.publication span,
+.skills span {
+    font-weight: bold;
+}
+
+.location,
+.gpa,
+.course,
+.job-role,
+.job-duration {
+    font-style: italic;
 }
 
 .job-title,
@@ -114,10 +232,35 @@
 .job-duration {
     flex-shrink: 1;
     margin-left: 10px;
-    font-style: italic;
 }
 
-.project span {
-    font-style: bold;
+.project li,
+.publication li,
+.education li,
+.award li,
+.vol_exp li,
+.experience li,
+.skills li {
+    margin-left: 20px;
 }
 
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; 
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .left h1,
+    .left a,
+    .right a {
+        font-size: 14px; 
+    }
+
+    .right {
+        margin-top: 5px; 
+    }
+}
