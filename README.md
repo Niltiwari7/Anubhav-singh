@@ -1,2 +1,1 @@
-# Anubhav-singh
-Resume of Anubhav singh
+# RESUME TEMPLATE USING HTML CSS
